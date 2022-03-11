@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <%# done here because this file is common to every file %>
+    <%flash.each do |name,msg|%>
+      <%=msg%>
+    <%end%>
+
     <%= yield %>
   </body>
 </html>
